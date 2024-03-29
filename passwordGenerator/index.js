@@ -1,3 +1,4 @@
+const generateBtn = document.querySelector('button');
 const smalLetters = 'abcdefghijklmnopqrstuvwxyz';
 const upLetters = smalLetters.toUpperCase();
 const signs = '~!@#$%^&*()_+';
@@ -14,7 +15,20 @@ const password = (len) => {
   for (let i = 0; i < len; i++) {
     pass = pass + allLetters[getRandomIndex()];
   }
-  console.log(pass);
+  return pass;
 };
 
-password(20);
+const generatePassword = (e) => {
+  e.preventDefault();
+  const passwordLength = document.querySelector('#password-length').value;
+  if (passwordLength.trim() > 6 && passwordLength.trim() < 50) {
+    const newPassword = password(passwordLength);
+
+    document.querySelector('#password-length').value = '';
+    document.querySelector('.pass-test').textContent = newPassword;
+  } else {
+    document.querySelector('.pass-test').textContent =
+      'Enter a number larger than 6, and smaller than 50';
+  }
+};
+generateBtn.addEventListener('click', generatePassword);
