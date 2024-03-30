@@ -1,11 +1,16 @@
-const obj = {
-  name: 'Radiant Emerald Phoenix',
-  size: 51,
-  weight: 693,
-  material: 'Diamond',
-  price: 37.82,
-  description:
-    'A magnificent Enigmatic Dragon that shines with Silver brilliance.',
-};
+const mentBtn = document.querySelector('#open');
+const container = document.querySelector('.container');
+const icon = document.querySelector('.fas');
 
-console.log(JSON.stringify(obj));
+mentBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  if (!container.classList.contains('show-nav')) {
+    container.classList.add('show-nav');
+    icon.classList.remove('fa-bars');
+    icon.classList.add('fa-times');
+  } else {
+    container.classList.remove('show-nav');
+    icon.classList.add('fa-bars');
+    icon.classList.remove('fa-times');
+  }
+});

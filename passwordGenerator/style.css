@@ -21,11 +21,10 @@ body {
   height: 100dvh;
 
   background-image: linear-gradient(
-    to right bottom,
+    -45deg,
     var(--clr1),
     var(--clr2),
-    var(--clr3),
-    var(--clr4)
+    var(--clr3)
   );
   display: flex;
   justify-content: center;
@@ -76,6 +75,7 @@ form {
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
+    transition: all 0.3s;
 
     &:active {
       transform: scale(1.15);
