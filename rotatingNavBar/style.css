@@ -29,6 +29,7 @@ body {
 }
 
 .circle {
+  cursor: pointer;
   height: 200px;
   width: 200px;
   background: rgb(221, 208, 86);
@@ -37,12 +38,12 @@ body {
   transition: all0 0.5s;
   button {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 45%;
+    /* left: 4%; */
     height: 100px;
     background: 0;
     border: 0;
-    font-size: 30px;
+    font-size: 40px;
     color: white;
     cursor: pointer;
     &:focus {

@@ -1,4 +1,4 @@
-const mentBtn = document.querySelector('#open');
+const mentBtn = document.querySelector('.circle');
 const container = document.querySelector('.container');
 const icon = document.querySelector('.fas');
 
