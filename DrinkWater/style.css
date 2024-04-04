@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
+:root {
+  --border-color: #144fc6;
+  --fill-color: #6ab3f8;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #3494e4;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: Lato;
+  margin-bottom: 40px;
+}
+
+h1 {
+  margin: 10px 0 0;
+}
+h2 {
+  font-weight: 600;
+  margin: 10px 0;
+}
+.cup {
+  background-color: white;
+  border: 4px solid var(--border-color);
+  color: var(--border-color);
+  border-radius: 0 0 40px 40px;
+  height: 330px;
+  width: 150px;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.cup.cup-small {
+  width: 50px;
+  height: 95px;
+  border-radius: 0 0 15px 15px;
+  background: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 5px;
+  transition: all 0.3s;
+}
+.cups {
+  display: flex;
+  flex-wrap: wrap;
+  width: 280px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+.cups .cup.full {
+  background-color: var(--fill-color);
+  color: white;
+}
+.remained {
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  flex: 1;
+  transition: all 0.3s;
+  #litters {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  small {
+    font-size: 12px;
+  }
+}
+.percentage {
+  background: var(--fill-color);
+  font-size: 30px;
+  text-align: center;
+  font-weight: 600;
+  height: 0px;
+  transition: all 0.3s;
+}
+.text {
+  text-align: center;
+  margin: 5px;
+  /* visibility: hidden */
+}
