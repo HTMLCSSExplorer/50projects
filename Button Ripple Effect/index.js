@@ -2,7 +2,7 @@ const btns = document.querySelectorAll('.btn');
 
 function myFunction(e) {
   const x = e.clientX;
-  const y = e.clienty;
+  const y = e.clientY;
 
   const btnTop = e.target.offsetTop;
   const btnLeft = e.target.offsetLeft;
@@ -19,7 +19,7 @@ function myFunction(e) {
 
   setTimeout(() => {
     circle.remove();
-  }, 500);
+  }, 1000);
 }
 
 btns.forEach((btn) => {
